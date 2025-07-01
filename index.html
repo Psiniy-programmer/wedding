@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Свадебное приглашение</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-rose-50 text-stone-800">
+
+    <!-- Обложка -->
+    <header class="relative h-screen bg-cover bg-center flex flex-col justify-center items-center text-center px-4"
+        style="background-image: url('./4.jpg');">
+        <div class="absolute inset-0 bg-stone-900/40 z-0"></div>
+        <div class="z-10 text-white">
+            <h1 class="text-5xl md:text-6xl mb-4 font-bold">Дмитрий & Елена</h1>
+            <p class="text-xl md:text-2xl italic">Праздник любви в окружении природы</p>
+        </div>
+    </header>
+
+    <!-- Обратный отсчет -->
+    <section class="py-16 px-6 bg-white">
+        <h2 class="text-3xl font-semibold text-center mb-6">До свадьбы осталось</h2>
+        <div id="countdown" class="text-center text-2xl font-mono text-rose-500"></div>
+        <h3 class="text-xl font-semibold text-center mt-4 text-gray-500 italic">🕒 23/08/2025 15:00</h3>
+    </section>
+
+    <script>
+        const countdown = document.getElementById('countdown');
+        const targetDate = new Date('2025-08-23T15:00:00');
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                countdown.innerText = 'Сегодня — день свадьбы!';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            countdown.innerText = `${days} д. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
+    <!-- Приглашение -->
+    <section class="py-16 px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6">Дорогие друзья</h2>
+        <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+            Мы с радостью приглашаем вас разделить с нами день, который мы так долго ждали — день нашей свадьбы! Вас
+            ждёт вечер в окружении деревянных ферм, живой музыки и ароматов лета.
+        </p>
+    </section>
+
+    <!-- Календарь -->
+    <section class="bg-rose-100 py-16 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+            <!-- Текст -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-semibold mb-4">Мы ждём вас</h2>
+                <p class="text-lg text-stone-700">Суббота, 23 августа 2025 года — не пропустите праздник в деревенском
+                    стиле 🌾</p>
+            </div>
+            <!-- Календарь -->
+            <div class="md:w-1/2 bg-white shadow-inner border border-stone-300 rounded-xl p-6 max-w-md">
+                <div class="text-center mb-4">
+                    <h3 class="text-2xl font-bold">Август</h3>
+                    <p class="text-gray-500 italic">23 / 08 / 2025</p>
+                    <div class="border-t border-gray-300 mt-4 mb-3 relative">
+                        <span
+                            class="absolute left-1/2 -top-3 transform -translate-x-1/2 bg-white px-2 text-sm text-gray-400">✿</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-7 gap-2 text-center text-xl text-stone-700">
+                    <div class="w-12 h-12 flex items-center justify-center">ПН</div>
+                    <div class="w-12 h-12 flex items-center justify-center">ВТ</div>
+                    <div class="w-12 h-12 flex items-center justify-center">СР</div>
+                    <div class="w-12 h-12 flex items-center justify-center">ЧТ</div>
+                    <div class="w-12 h-12 flex items-center justify-center">ПТ</div>
+                    <div class="w-12 h-12 flex items-center justify-center">СБ</div>
+                    <div class="w-12 h-12 flex items-center justify-center">ВС</div>
+
+                    <div class="w-12 h-12 flex items-center justify-center text-gray-300">27</div>
+                    <div class="w-12 h-12 flex items-center justify-center text-gray-300">28</div>
+                    <div class="w-12 h-12 flex items-center justify-center text-gray-300">29</div>
+                    <div class="w-12 h-12 flex items-center justify-center text-gray-300">30</div>
+                    <div class="w-12 h-12 flex items-center justify-center">1</div>
+                    <div class="w-12 h-12 flex items-center justify-center">2</div>
+                    <div class="w-12 h-12 flex items-center justify-center">3</div>
+
+                    <div class="w-12 h-12 flex items-center justify-center">4</div>
+                    <div class="w-12 h-12 flex items-center justify-center">5</div>
+                    <div class="w-12 h-12 flex items-center justify-center">6</div>
+                    <div class="w-12 h-12 flex items-center justify-center">7</div>
+                    <div class="w-12 h-12 flex items-center justify-center">8</div>
+                    <div class="w-12 h-12 flex items-center justify-center">9</div>
+                    <div class="w-12 h-12 flex items-center justify-center">10</div>
+
+                    <div class="w-12 h-12 flex items-center justify-center">11</div>
+                    <div class="w-12 h-12 flex items-center justify-center">12</div>
+                    <div class="w-12 h-12 flex items-center justify-center">13</div>
+                    <div class="w-12 h-12 flex items-center justify-center">14</div>
+                    <div class="w-12 h-12 flex items-center justify-center">15</div>
+                    <div class="w-12 h-12 flex items-center justify-center">16</div>
+                    <div class="w-12 h-12 flex items-center justify-center">17</div>
+
+                    <div class="w-12 h-12 flex items-center justify-center">18</div>
+                    <div class="w-12 h-12 flex items-center justify-center">19</div>
+                    <div class="w-12 h-12 flex items-center justify-center">20</div>
+                    <div class="w-12 h-12 flex items-center justify-center">21</div>
+                    <div class="w-12 h-12 flex items-center justify-center">22</div>
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="./red.jpeg" class="" />
+                    </div>
+                    <div class="w-12 h-12 flex items-center justify-center">24</div>
+
+                    <div class="w-12 h-12 flex items-center justify-center">25</div>
+                    <div class="w-12 h-12 flex items-center justify-center">26</div>
+                    <div class="w-12 h-12 flex items-center justify-center">27</div>
+                    <div class="w-12 h-12 flex items-center justify-center">28</div>
+                    <div class="w-12 h-12 flex items-center justify-center">29</div>
+
+                    <div class="w-12 h-12 flex items-center justify-center">30</div>
+                    <div class="w-12 h-12 flex items-center justify-center">31</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">Важная информация</h2>
+            <p class="text-lg text-stone-700 mb-4">Приглашаем вас на нашу русскую свадьбу — праздник с настоящим духом
+                деревни, смехом и танцами.<br /><br />Дресс-код — русский или деревенский стиль: платки, вышиванки,
+                сарафаны, красные рубашки, жилетки или просто удобная одежда для вечера на свежем воздухе.
+                <br /><br />Просим не дарить цветы — лучше принесите бутылочку вина. Цветы завянут, а вино мы выпьем с
+                удовольствием!
+                <br /><br />Будем рады видеть вас в этот особенный день!
+            </p>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="py-16 px-6">
+        <h2 class="text-3xl font-semibold text-center mb-10">Наша история знакомства</h2>
+        <div class="max-w-4xl mx-auto">
+            <!-- Изображение -->
+            <div class="relative overflow-hidden">
+                <img src="./обложка.png" alt="Большое свадебное фото" class="rounded-2xl w-full h-auto object-cover md:h-[600px]" />
+                <!-- Кнопка -->
+                <a href="comics.pdf" target="_blank"
+                    class="flex justify-center mt-4 items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-medium px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 ring-1 ring-rose-800/20 hover:ring-rose-800">
+                    Смотреть
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto border border-rose-200 rounded-xl shadow-md bg-rose-50 p-8">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Подтвердите своё присутствие</h3>
+            <form id="rsvp-form">
+                <input type="text" placeholder="Ваше имя" required
+                    class="w-full mb-4 p-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-rose-400 bg-white" />
+                <input type="text" placeholder="Telegram"
+                    class="w-full mb-4 p-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-rose-400 bg-white" />
+                <textarea placeholder="Комментарий (например, +1 гость, аллергии...)"
+                    class="w-full mb-4 p-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-rose-400 bg-white"></textarea>
+                <button id="rsvp-submit" type="submit"
+                    class="w-full bg-rose-400 hover:bg-rose-500 text-white font-semibold py-3 rounded-lg transition">
+                    Отправить
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const BOT_TOKEN = 'YOUR_BOT_TOKEN'; // 🔒 Заменить на токен
+        const CHAT_ID = 'YOUR_CHAT_ID';     // 🔒 Заменить на ID канала или чата
+
+        document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = e.target[0].value.trim();
+            const contact = e.target[1].value.trim();
+            const comment = e.target[2].value.trim();
+
+            const message = `📩 Новая заявка на свадьбу 📩\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n💬 Комментарий: ${comment || '—'}`;
+
+            const url = `http://127.0.0.1:3000/send`;
+
+            try {
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        name: name,
+                        contact: contact,
+                        comment: comment
+                    })
+                });
+
+                if (res.ok) {
+                    showModal('Спасибо!', 'Ваша заявка отправлена. Мы свяжемся с вами!');
+                    ('Спасибо! Ваш ответ отправлен 🤍');
+                    e.target.reset();
+                } else {
+                    showModal('Фронтендер ошибся', 'Что-то пошло не так. Попробуйте позже.');
+
+                }
+            } catch (err) {
+                console.error(err);
+                showModal('Фронтендер ошибся', 'Что-то пошло не так. Попробуйте позже.');
+            }
+        });
+
+        function showModal(title, message) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+
+    <!-- Модалка -->
+    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden">
+        <div class="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6 text-center">
+            <h3 id="modal-title" class="text-2xl font-semibold mb-2">Заголовок</h3>
+            <p id="modal-message" class="text-stone-600 mb-4">Текст</p>
+            <button onclick="closeModal()"
+                class="bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded-lg transition">Ок</button>
+        </div>
+    </div>
+
+
+    <!-- Подвал -->
+    <footer class="bg-stone-200 text-center py-6 text-sm text-stone-600">
+        С любовью, Дмитрий и Елена • Лето 2025
+    </footer>
+
+</body>
+
+</html>
