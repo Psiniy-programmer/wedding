@@ -210,7 +210,7 @@
             const comment = e.target[2].value.trim();
             const message = `📩 Новая заявка на свадьбу 📩\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n💬 Комментарий: ${comment || '—'}`;
 
-            const url = `http://za-mkadnaya-svadba.ru/api/send`;
+            const url = `https://za-mkadnaya-svadba.ru/api/send`;
 
             try {
                 const res = await fetch(url, {
