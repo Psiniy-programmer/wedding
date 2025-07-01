@@ -14,7 +14,7 @@ const TELEGRAM_CHANNEL_ID = '-4985610214';
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/send', async (req, res) => {
+app.post('/api/send', async (req, res) => {
   const { name, contact, comment } = req.body;
 
   const text = `📩 Новая заявка на свадьбу:\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n💬 Комментарий: ${comment || '—'}`;
