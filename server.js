@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 import fetch from 'node-fetch'; // если используешь Node 18+, можно убрать
 
 const app = express();
-const PORT = 3000;
+const PORT = 7301;
 
 const TELEGRAM_BOT_TOKEN = '8121854251:AAH2q0AXn6p_RD_vsub28XLYyOTEwtCa9Ko';
 const TELEGRAM_CHANNEL_ID = '-4985610214';

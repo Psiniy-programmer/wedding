@@ -202,9 +202,6 @@
     </section>
 
     <script>
-        const BOT_TOKEN = 'YOUR_BOT_TOKEN'; // 🔒 Заменить на токен
-        const CHAT_ID = 'YOUR_CHAT_ID';     // 🔒 Заменить на ID канала или чата
-
         document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -214,7 +211,7 @@
 
             const message = `📩 Новая заявка на свадьбу 📩\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n💬 Комментарий: ${comment || '—'}`;
 
-            const url = `http://127.0.0.1:3000/send`;
+            const url = `http://127.0.0.1:7301/send`;
 
             try {
                 const res = await fetch(url, {
