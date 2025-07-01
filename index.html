@@ -210,7 +210,7 @@
             const comment = e.target[2].value.trim();
             const message = `📩 Новая заявка на свадьбу 📩\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n💬 Комментарий: ${comment || '—'}`;
 
-            const url = `http://193.124.92.19:8080/api/send`;
+            const url = `http://193.124.92.19:80/api/send`;
 
             try {
                 const res = await fetch(url, {
