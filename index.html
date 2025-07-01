@@ -40,7 +40,6 @@
     <section class="py-16 px-6 bg-white">
         <h2 class="text-3xl font-semibold text-center mb-6">До свадьбы осталось</h2>
         <div id="countdown" class="text-center text-2xl font-mono text-rose-500"></div>
-        <h3 class="text-xl font-semibold text-center mt-4 text-gray-500 italic">🕒 23/08/2025 15:00</h3>
     </section>
 
     <script>
@@ -72,9 +71,10 @@
     <section class="py-16 px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-semibold mb-6">Дорогие друзья</h2>
         <p class="max-w-2xl mx-auto text-lg leading-relaxed">
-            Мы с радостью приглашаем вас разделить с нами день, который мы так долго ждали — день нашей свадьбы! Вас
-            ждёт вечер в окружении деревянных ферм, живой музыки и ароматов лета.
+            Мы с радостью приглашаем вас разделить с нами день, который мы так долго ждали — день нашей свадьбы!
         </p>
+        <h3 class="text-xl font-semibold text-center mt-4 text-gray-500 italic">🕒 23/08/2025 15:00</h3>
+
     </section>
 
     <!-- Календарь -->
@@ -172,16 +172,17 @@
         <h2 class="text-3xl font-semibold text-center mb-10">Наша история знакомства</h2>
         <div class="max-w-4xl mx-auto">
             <!-- Изображение -->
-            <div class="relative overflow-hidden">
+            <div class="flex flex-col relative overflow-hidden">
                 <a id="firstImage" href="./front.webp" data-lightbox="gallery" data-title="Фото 1">
-                    <img src="./front.webp" alt="Основная фотография" style="cursor: pointer;" class="rounded-2xl w-full h-auto object-cover md:h-[600px]" />
+                    <img src="./front.webp" alt="Основная фотография" style="cursor: pointer;"
+                        class="rounded-2xl w-full h-auto object-cover md:h-[600px]" />
                 </a>
 
                 <!-- Кнопка -->
                 <button id="openGalleryBtn"
                     class="flex justify-center mt-4 items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-medium px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 ring-1 ring-rose-800/20 hover:ring-rose-800">
                     Смотреть
-            </button>
+                </button>
 
                 <a href="./1.webp" data-lightbox="gallery" data-title="Фото 2" style="display:none;"></a>
                 <a href="./2.webp" data-lightbox="gallery" data-title="Фото 3" style="display:none;"></a>
@@ -218,10 +219,10 @@
     </section>
 
     <script>
-        document.getElementById('openGalleryBtn').addEventListener('click', function() {
-    // Имитируем клик по первой ссылке галереи
-    document.getElementById('firstImage').click();
-  });
+        document.getElementById('openGalleryBtn').addEventListener('click', function () {
+            // Имитируем клик по первой ссылке галереи
+            document.getElementById('firstImage').click();
+        });
         document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
             e.preventDefault();
 
