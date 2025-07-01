@@ -8,7 +8,7 @@ const PORT = 7301;
 const TELEGRAM_BOT_TOKEN = '8121854251:AAH2q0AXn6p_RD_vsub28XLYyOTEwtCa9Ko';
 const TELEGRAM_CHANNEL_ID = '-4985610214';
 const corsOptions = {
-  origin: 'http://za-mkadnaya-svadba.ru:80',  // или просто '*', если хочешь разрешить всем
+  origin: 'http://za-mkadnaya-svadba.ru',  // или просто '*', если хочешь разрешить всем
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, // если используешь куки
 };
