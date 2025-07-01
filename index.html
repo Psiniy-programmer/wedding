@@ -173,27 +173,31 @@
         <div class="max-w-4xl mx-auto">
             <!-- Изображение -->
             <div class="relative overflow-hidden">
-                <a href="обложка.webp" data-lightbox="gallery" data-title="Фото 1">
-                    <img src="обложка.webp" alt="Основная фотография" style="max-width: 300px; cursor: pointer;" />
+                <a id="firstImage" href="./front.webp" data-lightbox="gallery" data-title="Фото 1">
+                    <img src="./front.webp" alt="Основная фотография" style="cursor: pointer;" class="rounded-2xl w-full h-auto object-cover md:h-[600px]" />
                 </a>
 
+                <!-- Кнопка -->
+                <button id="openGalleryBtn"
+                    class="flex justify-center mt-4 items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-medium px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 ring-1 ring-rose-800/20 hover:ring-rose-800">
+                    Смотреть
+            </button>
+
                 <a href="./1.webp" data-lightbox="gallery" data-title="Фото 2" style="display:none;"></a>
-                <a href="Второй.webp" data-lightbox="gallery" data-title="Фото 3" style="display:none;"></a>
-                <a href="Третий.webp" data-lightbox="gallery" data-title="Фото 4" style="display:none;"></a>
-                <a href="Четвертый.webp" data-lightbox="gallery" data-title="Фото 5" style="display:none;"></a>
-                <a href="Первый.webp" data-lightbox="gallery" data-title="Фото 6" style="display:none;"></a>
-                <a href="Шестой.webp" data-lightbox="gallery" data-title="Фото 7" style="display:none;"></a>
-                <a href="Седьмой.webp" data-lightbox="gallery" data-title="Фото 8" style="display:none;"></a>
-                <a href="Восьмой.webp" data-lightbox="gallery" data-title="Фото 9" style="display:none;"></a>
-                <a href="Девятый.webp" data-lightbox="gallery" data-title="Фото 10" style="display:none;"></a>
-                <a href="Десятый.webp" data-lightbox="gallery" data-title="Фото 11" style="display:none;"></a>
-                <a href="Задняя обложка.webp" data-lightbox="gallery" data-title="Фото 12" style="display:none;"></a>
+                <a href="./2.webp" data-lightbox="gallery" data-title="Фото 3" style="display:none;"></a>
+                <a href="./3.webp" data-lightbox="gallery" data-title="Фото 4" style="display:none;"></a>
+                <a href="./4.webp" data-lightbox="gallery" data-title="Фото 5" style="display:none;"></a>
+                <a href="./5.webp" data-lightbox="gallery" data-title="Фото 6" style="display:none;"></a>
+                <a href="./6.webp" data-lightbox="gallery" data-title="Фото 7" style="display:none;"></a>
+                <a href="./7.webp" data-lightbox="gallery" data-title="Фото 8" style="display:none;"></a>
+                <a href="./8.webp" data-lightbox="gallery" data-title="Фото 9" style="display:none;"></a>
+                <a href="./9.webp" data-lightbox="gallery" data-title="Фото 10" style="display:none;"></a>
+                <a href="./10.webp" data-lightbox="gallery" data-title="Фото 11" style="display:none;"></a>
+                <a href="./back.webp" data-lightbox="gallery" data-title="Фото 12" style="display:none;"></a>
             </div>
         </div>
         </div>
     </section>
-https://za-mkadnaya-svadba.ru/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B9.webp
-https://za-mkadnaya-svadba.ru/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B8%CC%86.webp
     <!-- RSVP -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-4xl mx-auto border border-rose-200 rounded-xl shadow-md bg-rose-50 p-8">
@@ -214,6 +218,10 @@ https://za-mkadnaya-svadba.ru/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B8%CC%86.webp
     </section>
 
     <script>
+        document.getElementById('openGalleryBtn').addEventListener('click', function() {
+    // Имитируем клик по первой ссылке галереи
+    document.getElementById('firstImage').click();
+  });
         document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
             e.preventDefault();
 
