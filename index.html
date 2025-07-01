@@ -228,7 +228,6 @@
         });
         document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const name = e.target[0].value.trim();
             const contact = e.target[1].value.trim();
             const comment = e.target[2].value.trim();
@@ -250,8 +249,7 @@
                 });
 
                 if (res.ok) {
-                    showModal('Спасибо!', 'Ваша заявка отправлена. Мы свяжемся с вами!');
-                    ('Спасибо! Ваш ответ отправлен 🤍');
+                    showModal();
                     e.target.reset();
                 } else {
                     showModal('Фронтендер ошибся', 'Что-то пошло не так. Попробуйте позже.');
@@ -260,27 +258,43 @@
             } catch (err) {
                 console.error(err);
                 showModal('Фронтендер ошибся', 'Что-то пошло не так. Попробуйте позже.');
-            }
+            }   
         });
 
         function showModal(title, message) {
-            document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal-message').textContent = message;
-            document.getElementById('modal').classList.remove('hidden');
+            if (title || message) {
+                document.getElementById('modal-title').textContent = title;
+                document.getElementById('modal-message').textContent = message;
+                document.getElementById('modal-link').classList.add('hidden');
+                document.getElementById('myModal').classList.remove('hidden');
+                document.getElementById('modal-close').classList.remove('hidden');
+
+                return
+            }
+
+            document.getElementById('modal-message').classList.add('hidden');
+            document.getElementById('myModal').classList.remove('hidden');
         }
 
         function closeModal() {
-            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('myModal').classList.add('hidden');
         }
     </script>
 
     <!-- Модалка -->
-    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden">
-        <div class="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6 text-center">
-            <h3 id="modal-title" class="text-2xl font-semibold mb-2">Заголовок</h3>
-            <p id="modal-message" class="text-stone-600 mb-4">Текст</p>
+    <div id="myModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="flex justify-center flex-col bg-white p-6 rounded-lg text-center">
+            <p id="modal-title" class="mb-4">Присоединяйтесь к нам в Telegram!</p>
+            <p id="modal-message" class="mb-4">Присоединяйтесь к нам в Telegram!</p>
+            <a id="modal-link" href="https://t.me/+62qsux8KBwZmNDAy" target="_blank"
+                class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                Перейти в Telegram
+            </a>
             <button onclick="closeModal()"
-                class="bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded-lg transition">Ок</button>
+                class="hidden flex justify-center mt-4 items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-medium px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 ring-1 ring-rose-800/20 hover:ring-rose-800"
+                id="modal-close">
+                Закрыть
+            </button>
         </div>
     </div>
 
