@@ -208,7 +208,6 @@
             const name = e.target[0].value.trim();
             const contact = e.target[1].value.trim();
             const comment = e.target[2].value.trim();
-
             const message = `📩 Новая заявка на свадьбу 📩\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n💬 Комментарий: ${comment || '—'}`;
 
             const url = `http://127.0.0.1:7301/api/send`;
@@ -220,7 +219,6 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        chat_id: CHAT_ID,
                         name: name,
                         contact: contact,
                         comment: comment
