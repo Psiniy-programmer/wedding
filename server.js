@@ -1,9 +1,7 @@
-
-// server.js
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import fetch from 'node-fetch'; // если используешь Node 18+, можно убрать
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const fetch = require('node-fetch');
 
 const app = express();
 const PORT = 7301;
