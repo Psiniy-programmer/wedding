@@ -20,6 +20,8 @@
             font-family: 'Playfair Display', serif;
         }
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
 </head>
 
 <body class="bg-rose-50 text-stone-800">
@@ -171,12 +173,21 @@
         <div class="max-w-4xl mx-auto">
             <!-- Изображение -->
             <div class="relative overflow-hidden">
-                <img src="./обложка.png" alt="Большое свадебное фото" class="rounded-2xl w-full h-auto object-cover md:h-[600px]" />
-                <!-- Кнопка -->
-                <a href="comics.pdf" download target="_blank"
-                    class="flex justify-center mt-4 items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-medium px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 ring-1 ring-rose-800/20 hover:ring-rose-800">
-                    Смотреть
+                <a href="обложка.webp" data-lightbox="gallery" data-title="Фото 1">
+                    <img src="обложка.webp" alt="Основная фотография" style="max-width: 300px; cursor: pointer;" />
                 </a>
+
+                <a href="Первый.webp" data-lightbox="gallery" data-title="Фото 2" style="display:none;"></a>
+                <a href="Второй.webp" data-lightbox="gallery" data-title="Фото 3" style="display:none;"></a>
+                <a href="Третий.webp" data-lightbox="gallery" data-title="Фото 4" style="display:none;"></a>
+                <a href="Четвертый.webp" data-lightbox="gallery" data-title="Фото 5" style="display:none;"></a>
+                <a href="Первый.webp" data-lightbox="gallery" data-title="Фото 6" style="display:none;"></a>
+                <a href="Шестой.webp" data-lightbox="gallery" data-title="Фото 7" style="display:none;"></a>
+                <a href="Седьмой.webp" data-lightbox="gallery" data-title="Фото 8" style="display:none;"></a>
+                <a href="Восьмой.webp" data-lightbox="gallery" data-title="Фото 9" style="display:none;"></a>
+                <a href="Девятый.webp" data-lightbox="gallery" data-title="Фото 10" style="display:none;"></a>
+                <a href="Десятый.webp" data-lightbox="gallery" data-title="Фото 11" style="display:none;"></a>
+                <a href="Задняя обложка.webp" data-lightbox="gallery" data-title="Фото 12" style="display:none;"></a>
             </div>
         </div>
         </div>
@@ -265,6 +276,9 @@
     <footer class="bg-stone-200 text-center py-6 text-sm text-stone-600">
         С любовью, Дмитрий и Елена • Лето 2025
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 </body>
 
